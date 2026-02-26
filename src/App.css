@@ -1,8 +1,19 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Itim", sans-serif; /* consistent font */
+  scroll-behavior: smooth; /* smooth scrolling for nav links */
+  background-color: #f8f9fa; /* light background for modern look */
+  color: #222; /* text color */
+}
+
 #root {
-  max-width: 1280px;
+  width: 100%;
+  max-width: 1600px;
   margin: 0 auto;
-  padding: 2rem;
   text-align: center;
+  overflow-x: hidden;
 }
 
 .logo {
@@ -39,4 +50,28 @@
 
 .read-the-docs {
   color: #888;
+}
+
+.btn-primary {
+  background-color: #14213d;
+  border-radius: 12px;
+  color: #e5e5e5;
+  font-family: Itim;
+  font-weight: 400;
+  font-size: 20px;
+  border: none;
+  padding: 5px 20px;
+
+  &:hover {
+    color: #14213d;
+    background-color: #e5e5e5;
+    border: 1px solid #14213d;
+  }
+}
+
+.skills ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-align: start;
 }

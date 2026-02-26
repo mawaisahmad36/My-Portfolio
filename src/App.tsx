@@ -1,16 +1,21 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Layout } from "./components/layout/Layout";
+import { Home } from "./components/pages/Home";
+import { ScrollToHash } from "./components/layout/Footer";
+import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <h1>Muhammad Awais Portfolio</h1>
+      <ScrollToHash />   {/* 👈 This is REQUIRED */}
+
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+        </Route>
+      </Routes>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
